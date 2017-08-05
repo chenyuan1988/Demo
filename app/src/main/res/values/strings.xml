@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Demo</string>
+    <array name="titlelist">
+        <item>消息</item>
+        <item>联系人</item>
+        <item>动态</item>
+    </array>
 </resources>
