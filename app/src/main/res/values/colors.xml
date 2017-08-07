@@ -7,5 +7,7 @@
     <color name="btn_pressed">#999999</color>
     <color name="inactive">#999999</color>
     <color name="background_gray">#55000000</color>
+    <color name="hongse">#fc4a3e</color>
+    <color name="danhongse">#e8572a</color>
 
 </resources>

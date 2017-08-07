@@ -3,6 +3,7 @@ package com.example.chenyuan.demo.activity;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.widget.FrameLayout;
@@ -13,6 +14,8 @@ import com.ashokvarma.bottomnavigation.BottomNavigationItem;
 import com.example.chenyuan.demo.R;
 import com.example.chenyuan.demo.fragment.BaseFragment;
 import com.example.chenyuan.demo.fragment.FragmentFactory;
+
+import org.zackratos.ultimatebar.UltimateBar;
 
 import java.util.Arrays;
 import java.util.List;
@@ -39,6 +42,8 @@ public class MainActivity extends BaseActivity {
     }
 
     protected void initData() {
+        mTbToolbar.setTitle("");
+        setSupportActionBar(mTbToolbar);
         mStrings = Arrays.asList(getResources().getStringArray(R.array.titlelist));
         mBottomNavigationBar.selectTab(0);
         List<Fragment> fragments = getSupportFragmentManager().getFragments();
@@ -62,6 +67,9 @@ public class MainActivity extends BaseActivity {
     }
 
     protected void initView() {
+        //分别设置toolbar背景色和和状态栏背景色
+        UltimateBar ultimateBar = new UltimateBar(this);
+        ultimateBar.setColorBar(ContextCompat.getColor(this, R.color.danhongse), 50);
         BottomNavigationItem conversationItem = new BottomNavigationItem(R.mipmap.first_presed, "消息");
         //BadgeItem 底部导航图标 右上角的圆圈文字
         conversationItem.setInactiveIconResource(R.mipmap.first);
@@ -129,12 +137,4 @@ public class MainActivity extends BaseActivity {
         ButterKnife.bind(this);
     }
 
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-       /* for (int i = 0; i < 3; i++) {
-            BaseFragment instance = FragmentFactory.getInstance(i);
-            instance = null;
-        }*/
-    }
 }

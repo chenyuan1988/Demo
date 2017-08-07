@@ -6,8 +6,6 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 
-import org.zackratos.ultimatebar.UltimateBar;
-
 import butterknife.ButterKnife;
 
 /**
@@ -23,9 +21,9 @@ public abstract class BaseActivity extends AppCompatActivity {
         setContentView(getLayoutId());
         ButterKnife.bind(this);
         context = this;
-        UltimateBar ultimateBar = new UltimateBar(this);
+       /* UltimateBar ultimateBar = new UltimateBar(this);
         //ultimateBar.setColorBar(ContextCompat.getColor(this, R.color.colorPrimary));
-        ultimateBar.setImmersionBar();
+        ultimateBar.setImmersionBar();*/
         initView();
         initData();
         initListener();
