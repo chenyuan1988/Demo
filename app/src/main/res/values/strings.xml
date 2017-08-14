@@ -5,4 +5,11 @@
         <item>联系人</item>
         <item>动态</item>
     </array>
+    <array name="urls">
+        <item>"https://img6.bdstatic.com/img/image/smallpic/weijuchiluntu.jpg"</item>
+        <item>"https://img6.bdstatic.com/img/image/xiaolu/wujingzhanlang2.jpg"</item>
+        <item>"https://img6.bdstatic.com/img/image/smallpic/duoroubanqq.jpg"</item>
+        <item>https://img6.bdstatic.com/img/image/xiaolu/xiaotu89.png</item>
+        <item>https://img6.bdstatic.com/img/image/xiaolu/banquantupian801.png</item>
+    </array>
 </resources>

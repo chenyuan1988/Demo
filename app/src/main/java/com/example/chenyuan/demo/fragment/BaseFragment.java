@@ -1,5 +1,6 @@
 package com.example.chenyuan.demo.fragment;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -18,6 +19,7 @@ import butterknife.Unbinder;
 public abstract class BaseFragment extends Fragment {
 
     private Unbinder mUnbinder;
+    protected Activity mActivity;
 
     @Nullable
     @Override
@@ -52,5 +54,9 @@ public abstract class BaseFragment extends Fragment {
 
     protected abstract void initListener();
 
-
+    @Override
+    public void onAttach(Activity activity) {
+        super.onAttach(activity);
+        this.mActivity = activity;
+    }
 }
